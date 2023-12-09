@@ -1,12 +1,15 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+
+APP = ['BTcalculator.py']  # Replace with your script's filename
+DATA_FILES = []  # Any additional files
+OPTIONS = {
+    'argv_emulation': True,
+    'packages': ['requests', 'tkinter'],  # Required packages
+}
 
 setup(
-    name='btcalculator',
-    version='1.0.0',
-    description='A simple calculator package',
-    author='Evlar',
-    packages=find_packages(),
-    entry_points={
-        'console_scripts': ['btcalculator=BTcalculator:main'],
-    },
+    app=APP,
+    data_files=DATA_FILES,
+    options={'py2app': OPTIONS},
+    setup_requires=['py2app'],
 )

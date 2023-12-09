@@ -13,7 +13,7 @@ class ValidatorApp:
         #self.root.after(100, self.fetch_and_update_validator_stats)
 
     def setup_gui(self):
-        self.root.title("Validator Calculator")
+        self.root.title("Tao Delegation Calculator")
         self.root.minsize(800, 600)
 
         padx = 10
